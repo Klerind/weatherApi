@@ -1,0 +1,55 @@
+body{
+  background-image: linear-gradient(45deg, #ADD8E6, #F0FFFF, #F0F8FF, #E0FFFF, #e1e1e1, #E6E6FA, #F5F5F5);
+  background-size: 400%;
+  min-height: 96vh;
+}
+main h2{
+  text-align: center;
+}
+main form{
+  text-align: center;
+}
+main form input:first-child{
+  text-transform: capitalize;
+  border: none;
+  border-radius: .3em;
+  padding: .6em;
+  margin: .3em;
+  font-size: .9em;
+  font-weight: 300;
+  line-height: 1.3em;
+}
+main form button{
+  border: none;
+  border-radius: .3em;
+  padding: .6em;
+  margin: 1em;
+  background-color: lightblue;
+  text-transform: capitalize;
+  font-size: .9em;
+  font-weight: 300;
+  line-height: 1.3em;
+  cursor: pointer;
+}
+main #cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main #cards div{
+  min-width: 18em;
+  max-width: 21em;
+  padding: .9em;
+  margin: .9em;
+  background-color: white;
+  box-shadow: 0 20px 27px -20px #000;
+  border-radius: 6px;
+  transform-origin: bottom;
+  transform: rotateX(9deg);
+}
+main #cards div span{
+  display: block;
+  padding: .3em;
+  margin: .3em;
+  border-bottom: 0.1em solid lightblue;
+}
