@@ -13,7 +13,7 @@ function getData(data) {
  defaultElements(weather);
 }
 //sends request to openweathermap api and gets data according to the given coordinates
-getAjaxRequest("http://api.openweathermap.org/data/2.5/find?lat="+coordinates.location.lat+"&lon="+20.235564699999998+"&cnt=6&appid="+apiKey+"&units=metric",getData);
+getAjaxRequest("http://api.openweathermap.org/data/2.5/find?lat="+coordinates.location.lat+"&lon="+coordinates.location.lng+"&cnt=6&appid="+apiKey+"&units=metric",getData);
 }
 //request to google geolocation api
 request.open("POST","https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAXwWiNBdkDRU5dQ8imwUb8mzrZVbvARQM",true)
@@ -42,13 +42,13 @@ forms[0][1].onclick = () =>{
           //converts json data to javascript object and saves it to a constant variable
           const weather = JSON.parse(data.responseText);
           //calls defaultMode function and passes weather variable
-        }
           defaultMode(weather)
-        }
+          }
         //calls getAjaxRequest function and passes into it an address with dynamic city id variable and dynamic api key variable and passes a function as well into it
         getAjaxRequest("http://api.openweathermap.org/data/2.5/weather?id="+citys[i].id+"&units=metric&lang=al&appid="+apiKey,getData)
+       }
       }
     }
-  }
   //calls getAjaxRequest function and passes a function and an address into it
   getAjaxRequest("json/city.list.json",getData)
+}
